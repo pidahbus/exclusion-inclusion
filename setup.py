@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='exclusion-inclusion',
+    name='ei',
     version='0.1',
     author='Subhadip Maji',
     author_email='subhadipmaji.jumech@gmail.com',
@@ -16,6 +16,7 @@ setuptools.setup(
         "Bug Tracker": "https://github.optum.com/DataScienceIndia/exclusion-inclusion/issues"
     },
     license='',
-    packages=['exclusion-inclusion'],
+    packages=['ei'],
     install_requires=['numpy', 'pandas', 'tensorflow'],
 )
+
