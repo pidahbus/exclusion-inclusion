@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='ei',
-    version='0.1',
+    version='0.1.1',
     author='Subhadip Maji',
     author_email='subhadipmaji.jumech@gmail.com',
     description=('A model agnostic approach to calculate feature importance with direction'),
