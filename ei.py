@@ -4,6 +4,14 @@ import numpy as np
 from utils import find_variable_importance, find_variable_effect, complete_words
 
 class ExclusionInclusion:
+    """
+    model: keras model instance
+    mode: "regression" or "classification"
+    labels: All the label index of the classification in list e.g. [0, 1, 2, 3, 4]. This is only needed for
+            classification.
+    max_len: sequence length of the model i.e. the maxlen argument value while padding
+    vocab_with_index: vocabulary with index value dictionary i.e. tokenizer.word_index
+    """
     def __init__(self, model, mode, max_len, vocab_with_index, labels=None):
         self.model = model
         self.mode = mode
@@ -22,12 +30,7 @@ class ExclusionInclusion:
         X_without_padding: The input word index numpy array sequence without padding, e.g. np.array([11, 2, 4])
         y : If mode is "regression" then y will be the true score, if model is "classification" then y will be the
             class index for which the effect of phrases to be calculated.
-        model: keras model instance
-        mode: "regression" or "classification"
-        labels: All the label index of the classification in list e.g. [0, 1, 2, 3, 4]. This is only needed for
-                classification.
-        max_len: sequence length of the model i.e. the maxlen argument value while padding
-        vocab_with_index: vocabulary with index value dictionary i.e. tokenizer.word_index
+
         gram_limit: The maximum phrase length while calculating effects of phrases. To get all the possible
                     combination set gram_limit to max_len argument value
         sequence_type: if "short" calculates all possible combination. if "long" breaks iteration where sign changes
