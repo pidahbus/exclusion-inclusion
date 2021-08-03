@@ -15,6 +15,7 @@ setuptools.setup(
     project_urls = {
         "Bug Tracker": "https://github.optum.com/DataScienceIndia/exclusion-inclusion/issues"
     },
+    license = '',
     packages=['exclusion-inclusion'],
     install_requires=['requests'],
 )
