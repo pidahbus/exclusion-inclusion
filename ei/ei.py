@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 import numpy as np
-from utils import find_variable_importance, find_variable_effect, complete_words
+from ei.utils import find_variable_importance, find_variable_effect, complete_words
 
 class ExclusionInclusion:
     """
