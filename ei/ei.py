@@ -47,6 +47,8 @@ class ExclusionInclusion:
         else:
             X_without_padding = X_without_padding[:self.max_len]
 
+        response_actual = X_without_padding.copy()
+
         if self.mode == "regression":
             #Prediction using all the words
             #logger.info(f"True Output: {y_true}")
@@ -68,15 +70,19 @@ class ExclusionInclusion:
             important_words_idx = [self.vocab_with_index[word] for word in important_words_list]
 
             #Fill unimportant words idx to 0
-            response_actual = X_without_padding.copy()
+            # response_actual = X_without_padding.copy()
             response = np.array([idx if idx in important_words_idx else 0 for idx in X_without_padding])
 
-            #set y to t_true
+            #set y to y_true
             y = y_true
 
         elif self.mode == "classification":
             response = X_without_padding
             complete_phrase = False
+            y = y_true
+
+        else:
+            return "Mode should be either Regression or Classification."
 
         #Find enablers and disablers
         #logger.info(f"Finding enablers and disablers!")
