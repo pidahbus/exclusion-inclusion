@@ -8,14 +8,14 @@ setuptools.setup(
     version='0.1',
     author='Subhadip Maji',
     author_email='subhadipmaji.jumech@gmail.com',
-    description='A model agnostic approach to calculate feature importance with direction',
+    description=('A model agnostic approach to calculate feature importance with direction'),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.optum.com/DataScienceIndia/exclusion-inclusion',
-    project_urls = {
+    project_urls={
         "Bug Tracker": "https://github.optum.com/DataScienceIndia/exclusion-inclusion/issues"
     },
-    license = '',
+    license='',
     packages=['exclusion-inclusion'],
-    install_requires=['requests'],
+    install_requires=['numpy', 'pandas', 'tensorflow'],
 )
