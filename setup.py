@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='ei',
-    version='0.1.1',
+    version='0.1.2',
     author='Subhadip Maji',
     author_email='subhadipmaji.jumech@gmail.com',
     description=('A model agnostic approach to calculate feature importance with direction'),
@@ -17,6 +17,6 @@ setuptools.setup(
     },
     license='',
     packages=['ei'],
-    install_requires=['numpy', 'pandas', 'tensorflow'],
+    install_requires=['numpy>=1.19.5', 'pandas>=1.2.4', 'tensorflow>=2.5.0', 'loguru>=0.3.2'],
 )
 
