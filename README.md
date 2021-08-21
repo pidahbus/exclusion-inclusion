@@ -52,6 +52,8 @@ those cases are negative. This is completely intuitive, as the sentiment of the 
 negative side. Therefore, EI shows how a trained model sees each of the n-grams to predict the sentiment of the whole 
 sentence.
 
+![](./images/ei_example_2.png)
+
 ## Citation
 This paper is submitted for publication. If you are using this model then please use the below BibTeX to cite for now.
 
