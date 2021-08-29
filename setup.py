@@ -11,9 +11,9 @@ setuptools.setup(
     description=('A model agnostic approach to calculate feature importance with direction'),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.optum.com/DataScienceIndia/exclusion-inclusion',
+    url='https://github.com/pidahbus/exclusion-inclusion',
     project_urls={
-        "Bug Tracker": "https://github.optum.com/DataScienceIndia/exclusion-inclusion/issues"
+        "Bug Tracker": "https://github.com/pidahbus/exclusion-inclusion/issues"
     },
     license='',
     packages=['ei'],
